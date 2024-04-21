@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+:root {
+  height: 100%;
+}
+
+.custom-scrollbar {
+  -webkit-overflow-scrolling: touch; /* For WebKit-based browsers */
+  scroll-behavior: smooth; /* For all modern browsers */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 6px; /* Adjust the height as desired */
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px; /* Adjust the border radius as desired */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.leaflet-bottom,
+.leaflet-control,
+.leaflet-pane,
+.leaflet-top {
+    z-index: 0 !important;
+}
+
+.rdrMonth {
+    width: 100% !important;
+}
+
+.rdrCalendarWrapper {
+    width: 100% !important;
+    font-size: 16px !important ;
+}
