@@ -15,7 +15,7 @@ interface FavoritesClientProps {
     listings: SafeListings[];
 }
 
-export default ({ currentUser, listings }: FavoritesClientProps) => {
+const FavoritesClient= ({ currentUser, listings }: FavoritesClientProps) => {
     const router = useRouter();
     const [deletingId, setDeletingId] = useState('');
     const onCancel = useCallback(
@@ -54,3 +54,5 @@ export default ({ currentUser, listings }: FavoritesClientProps) => {
         </Container>
     );
 };
+
+export default FavoritesClient;

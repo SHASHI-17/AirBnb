@@ -8,7 +8,7 @@ interface ListingCategoryProps {
     description: string;
 }
 
-export default ({ icon: Icon, label, description }: ListingCategoryProps) => {
+const ListingCategory= ({ icon: Icon, label, description }: ListingCategoryProps) => {
     return (
         <div className="flex flex-col gap-6">
             <div className="flex flex-row items-center gap-4">
@@ -23,3 +23,5 @@ export default ({ icon: Icon, label, description }: ListingCategoryProps) => {
         </div>
     );
 };
+
+export default ListingCategory;

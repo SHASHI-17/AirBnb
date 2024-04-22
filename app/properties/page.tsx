@@ -3,7 +3,7 @@ import getListings from "../actions/getListings";
 import EmptyState from "../components/EmptyState";
 import PorpertiesClient from "./PorpertiesClient";
 
-export default async () => {
+const page= async () => {
   const currentUser = await getCurrentUser();
 
   if (!currentUser) {
@@ -21,3 +21,5 @@ export default async () => {
   }
   return <PorpertiesClient listings={listings} currentUser={currentUser} />;
 };
+
+export default page;

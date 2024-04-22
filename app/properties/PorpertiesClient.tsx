@@ -16,7 +16,7 @@ interface TripClientProps {
     listings: SafeListings[];
 }
 
-export default ({ currentUser, listings }: TripClientProps) => {
+const PorpertiesClient=({ currentUser, listings }: TripClientProps) => {
     const router = useRouter();
     const [deletingId, setDeletingId] = useState('');
     const onCancel = useCallback(
@@ -56,3 +56,5 @@ export default ({ currentUser, listings }: TripClientProps) => {
         </Container>
     );
 };
+
+export default PorpertiesClient;

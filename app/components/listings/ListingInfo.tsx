@@ -22,7 +22,7 @@ interface ListingInfoProps {
   locationValue: string;
 }
 
-export default ({user,category,description,roomcount,guestCount,bathroonmCount,locationValue}: ListingInfoProps) => {
+const ListingInfo= ({user,category,description,roomcount,guestCount,bathroonmCount,locationValue}: ListingInfoProps) => {
 
   const { getByValue } = useCountries();
   const coordinates = getByValue(locationValue)?.latlng;
@@ -55,3 +55,5 @@ export default ({user,category,description,roomcount,guestCount,bathroonmCount,l
     </div>
   );
 };
+
+export default ListingInfo;

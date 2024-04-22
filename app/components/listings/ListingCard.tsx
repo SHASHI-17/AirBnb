@@ -21,7 +21,7 @@ interface ListingCardProps {
     currentUser?: SafeUser | null;
 }
 
-export default ({
+const CountrySelect=({
     data,
     reservation,
     onAction,
@@ -100,3 +100,5 @@ export default ({
         </div>
     );
 };
+
+export default CountrySelect;

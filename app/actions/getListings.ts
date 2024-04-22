@@ -12,26 +12,26 @@ export interface IListingParams {
     category?: string;
 }
 
-export default async (params:IListingParams) => {
+const getListings = async (params: IListingParams) => {
     try {
         const { userId, guestCount, roomCount, bathroomCount, startDate, endDate, locationValue, category } = params;
         let query: any = {};
-        
+
 
         if (category) query.category = category;
-        
+
 
         if (guestCount) query.guestCount = { gte: +guestCount };
-        
+
 
         if (roomCount) query.roomCount = { gte: +roomCount };
-        
+
 
         if (bathroomCount) query.bathroomCount = { gte: +bathroomCount };
-        
+
 
         if (locationValue) query.locationValue = locationValue;
-        
+
 
         if (startDate && endDate) {
             query.NOT = {
@@ -69,3 +69,5 @@ export default async (params:IListingParams) => {
         throw new Error(error);
     }
 };
+
+export default getListings;

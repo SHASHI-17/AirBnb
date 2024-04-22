@@ -3,7 +3,7 @@ import getReservations from "../actions/getReservations";
 import EmptyState from "../components/EmptyState";
 import TripsClient from "./TripsClient";
 
-export default async () => {
+const page= async () => {
   const currentUser = await getCurrentUser();
 
   if (!currentUser) {
@@ -21,3 +21,5 @@ export default async () => {
   }
   return <TripsClient reservations={reservations} currentUser={currentUser} />;
 };
+
+export default page;

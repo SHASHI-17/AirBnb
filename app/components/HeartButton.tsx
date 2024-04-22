@@ -10,7 +10,7 @@ interface HeartButtonProps {
   currentUser?: SafeUser | null;
 }
 
-export default ({ listingId, currentUser }: HeartButtonProps) => {
+const HeartButton= ({ listingId, currentUser }: HeartButtonProps) => {
   const { hasFavorited, toggleFavorite } = useFavorite({listingId,currentUser});
 
   return (
@@ -29,3 +29,5 @@ export default ({ listingId, currentUser }: HeartButtonProps) => {
     </div>
   );
 };
+
+export default HeartButton;

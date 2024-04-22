@@ -7,10 +7,12 @@ interface ErrorStateProps {
     error: Error;
 }
 
-export default ({ error }: ErrorStateProps) => {
+const error= ({ error }: ErrorStateProps) => {
     useEffect(() => {
         console.error(error);
     }, [error]);
 
     return <EmptyState title="Uh oh" subtitle="Something went wrong!" />;
 };
+
+export default error;

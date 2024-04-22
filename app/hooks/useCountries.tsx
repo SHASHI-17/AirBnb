@@ -8,7 +8,7 @@ const formattedCountries = countries.map(country => ({
     region: country.region,
 }));
 
-export default () => {
+const useCountries= () => {
     const getAll = () => formattedCountries;
 
     const getByValue = (value: string) => {
@@ -20,3 +20,5 @@ export default () => {
         getByValue,
     };
 };
+
+export default useCountries;

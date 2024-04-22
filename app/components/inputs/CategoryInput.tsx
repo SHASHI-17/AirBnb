@@ -9,7 +9,7 @@ interface CategoryInputProps {
     onClick: (value: string,value2?:boolean) => void;
 }
 
-export default ({
+const CategoryInput= ({
     icon: Icon,
     label,
     selected,
@@ -27,3 +27,5 @@ export default ({
         </div>
     );
 };
+
+export default CategoryInput;

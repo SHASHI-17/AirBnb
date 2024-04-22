@@ -10,7 +10,7 @@ interface CounterProps {
     onChange: (value: number) => void;
 }
 
-export default ({ title, subtitle, value, onChange }: CounterProps) => {
+const Counter= ({ title, subtitle, value, onChange }: CounterProps) => {
     const onAdd = useCallback(() => {
         onChange(value + 1);
     }, [onChange, value]);
@@ -46,3 +46,5 @@ export default ({ title, subtitle, value, onChange }: CounterProps) => {
         </div>
     );
 };
+
+export default Counter;

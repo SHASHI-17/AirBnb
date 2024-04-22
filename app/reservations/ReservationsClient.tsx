@@ -16,7 +16,7 @@ interface ReservationsClientProps {
     reservations: SafeReservation[];
 }
 
-export default ({ currentUser, reservations }: ReservationsClientProps) => {
+const ReservationsClient= ({ currentUser, reservations }: ReservationsClientProps) => {
     const router = useRouter();
     const [deletingId, setDeletingId] = useState('');
     const onCancel = useCallback(
@@ -60,3 +60,5 @@ export default ({ currentUser, reservations }: ReservationsClientProps) => {
         </Container>
     );
 };
+
+export default ReservationsClient;
