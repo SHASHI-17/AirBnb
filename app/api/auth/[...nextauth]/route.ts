@@ -1,5 +1,6 @@
 // @ts-nocheck
-import NextAuth, { AuthOptions } from 'next-auth';
+import type { AuthOptions } from 'next-auth';
+import NextAuth from 'next-auth';
 import GithubProvider from 'next-auth/providers/github'
 import GoogleProvider from 'next-auth/providers/google'
 import CredentialsProvider from 'next-auth/providers/credentials'
