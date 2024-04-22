@@ -8,10 +8,6 @@ interface ErrorStateProps {
 }
 
 const error= ({ error }: ErrorStateProps) => {
-    useEffect(() => {
-        console.error(error);
-    }, [error]);
-
     return <EmptyState title="Uh oh" subtitle="Something went wrong!" />;
 };
 
