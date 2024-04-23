@@ -17,6 +17,9 @@ const getListings = async (params: IListingParams) => {
         const { userId, guestCount, roomCount, bathroomCount, startDate, endDate, locationValue, category } = params;
         let query: any = {};
 
+        if (userId) {
+            query.userId = userId;
+        }
 
         if (category) query.category = category;
 
