@@ -1,9 +1,10 @@
 import getCurrentUser from "../actions/getCurrentUser";
 import getReservations from "../actions/getReservations";
+import ClientOnly from "../components/ClientOnly";
 import EmptyState from "../components/EmptyState";
 import ReservationsClient from "./ReservationsClient";
-
-const page= async () => {
+export const dynamic = 'force-dynamic'
+const page = async () => {
   const currentUser = await getCurrentUser();
 
   if (!currentUser) {
@@ -20,11 +21,13 @@ const page= async () => {
     );
   }
   return (
+
       <ReservationsClient
         reservations={reservations}
         currentUser={currentUser}
       />
+
   );
 };
 
-export default page
+export default page;

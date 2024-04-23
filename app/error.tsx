@@ -1,14 +1,9 @@
-'use client';
-
-import { useEffect } from 'react';
+'use client'
+import dynamic from "next/dynamic"
 import EmptyState from './components/EmptyState';
 
-interface ErrorStateProps {
-    error: Error;
+const Error = () => {
+  return <EmptyState title="Uh oh" subtitle="Something went wrong!" />;
 }
 
-const error= ({ error }: ErrorStateProps) => {
-    return <EmptyState title="Uh oh" subtitle="Something went wrong!" />;
-};
-
-export default error;
+export default dynamic(() => Promise.resolve(Error), { ssr: false })

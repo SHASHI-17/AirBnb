@@ -1,9 +1,10 @@
 import getCurrentUser from "../actions/getCurrentUser";
 import getListings from "../actions/getListings";
+import ClientOnly from "../components/ClientOnly";
 import EmptyState from "../components/EmptyState";
 import PorpertiesClient from "./PorpertiesClient";
-
-const page= async () => {
+export const dynamic = 'force-dynamic'
+const page = async () => {
   const currentUser = await getCurrentUser();
 
   if (!currentUser) {
@@ -19,7 +20,11 @@ const page= async () => {
       />
     );
   }
-  return <PorpertiesClient listings={listings} currentUser={currentUser} />;
+  return (
+
+      <PorpertiesClient listings={listings} currentUser={currentUser} />
+
+  );
 };
 
 export default page;
